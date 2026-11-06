@@ -1,0 +1,15 @@
+{
+  "name": "zetmar-skills",
+  "description": "Skille Marka Zettla dla Claude Code",
+  "owner": {
+    "name": "Marek Zettel",
+    "url": "https://github.com/zetmar-collab"
+  },
+  "plugins": [
+    {
+      "name": "backup-agent-settings",
+      "source": "./",
+      "description": "Kopia zapasowa ustawień Codex i Claude Code (~/.codex i ~/.claude) do jednego pliku ZIP."
+    }
+  ]
+}

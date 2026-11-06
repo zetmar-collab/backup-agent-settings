@@ -11,10 +11,15 @@ Wynikiem jest jeden plik ZIP z zachowaną strukturą katalogów. Skrypt działa 
 
 ```text
 backup-agent-settings/
-├── SKILL.md
-├── README.md
-└── scripts/
-    └── backup.py
+├── .claude-plugin/
+│   ├── plugin.json
+│   └── marketplace.json
+├── skills/
+│   └── backup-agent-settings/
+│       ├── SKILL.md
+│       └── scripts/
+│           └── backup.py
+└── README.md
 ```
 
 ## Wymagania
@@ -25,9 +30,27 @@ backup-agent-settings/
 
 ## Instalacja
 
-### Claude Code
+### Claude Code - przez marketplace (zalecane)
 
-Rozpakuj archiwum i umieść cały katalog `backup-agent-settings` w:
+Repozytorium jest jednocześnie pluginem i marketplace'em. W terminalu:
+
+```bash
+claude plugin marketplace add zetmar-collab/backup-agent-settings
+claude plugin install backup-agent-settings@zetmar-skills
+```
+
+Albo w sesji Claude Code:
+
+```text
+/plugin marketplace add zetmar-collab/backup-agent-settings
+/plugin install backup-agent-settings@zetmar-skills
+```
+
+Skill uruchomisz jako `/backup-agent-settings:backup-agent-settings` albo prosząc agenta o backup ustawień.
+
+### Claude Code - ręcznie
+
+Skopiuj katalog `skills/backup-agent-settings` z tego repozytorium do:
 
 ```text
 ~/.claude/skills/backup-agent-settings/
@@ -38,14 +61,13 @@ Po instalacji struktura powinna wyglądać tak:
 ```text
 ~/.claude/skills/backup-agent-settings/
 ├── SKILL.md
-├── README.md
 └── scripts/
     └── backup.py
 ```
 
 ### Codex
 
-Rozpakuj archiwum i umieść cały katalog `backup-agent-settings` w:
+Skopiuj katalog `skills/backup-agent-settings` z tego repozytorium do:
 
 ```text
 ~/.codex/skills/backup-agent-settings/
@@ -56,7 +78,6 @@ Po instalacji struktura powinna wyglądać tak:
 ```text
 ~/.codex/skills/backup-agent-settings/
 ├── SKILL.md
-├── README.md
 └── scripts/
     └── backup.py
 ```

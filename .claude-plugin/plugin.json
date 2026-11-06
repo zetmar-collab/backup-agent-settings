@@ -1,0 +1,12 @@
+{
+  "name": "backup-agent-settings",
+  "description": "Kopia zapasowa ustawień Codex i Claude Code (~/.codex i ~/.claude) do jednego pliku ZIP.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Marek Zettel",
+    "url": "https://github.com/zetmar-collab"
+  },
+  "homepage": "https://github.com/zetmar-collab/backup-agent-settings",
+  "repository": "https://github.com/zetmar-collab/backup-agent-settings",
+  "keywords": ["backup", "claude-code", "codex", "settings"]
+}
